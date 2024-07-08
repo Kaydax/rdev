@@ -73,6 +73,12 @@ unsafe fn send_native(event_type: &EventType, display: *mut xlib::Display) -> Op
             }
             result
         }
+        EventType::SimulatedKeyPress(_) => todo!(),
+        EventType::SimulatedKeyRelease(_) => todo!(),
+        EventType::SimulatedButtonPress(_) => todo!(),
+        EventType::SimulatedButtonRelease(_) => todo!(),
+        EventType::SimulatedMouseMove { x, y } => todo!(),
+        EventType::SimulatedWheel { delta_x, delta_y } => todo!(),
     };
     if res == 0 {
         None
